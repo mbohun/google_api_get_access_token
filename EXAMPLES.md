@@ -80,3 +80,33 @@ curl -s \
   "coverPhotoMediaItemId": "ANABYShgGfa__jyB2AwRzldN-p15_R6YrNVCv4sFNRJxjrlDoLLzcOWLLcsEXcSXBRSSb-lTlCm5aAtkLA3f5xoevMkuvQA1xQ"
 }
 ```
+
+#### [mediaItems.get](https://developers.google.com/photos/library/reference/rest/v1/mediaItems/get?refresh=1)
+```BASH
+curl -s \
+     -X GET \
+     -H 'Content-type: application/json' \
+     -H "Authorization: Bearer `./google_api_get_access_token.sh -r`" \
+     https://photoslibrary.googleapis.com/v1/mediaItems/ANABYShgGfa__jyB2AwRzldN-p15_R6YrNVCv4sFNRJxjrlDoLLzcOWLLcsEXcSXBRSSb-lTlCm5aAtkLA3f5xoevMkuvQA1xQ | jq '.'
+```
+```JSON
+{
+  "id": "ANABYShgGfa__jyB2AwRzldN-p15_R6YrNVCv4sFNRJxjrlDoLLzcOWLLcsEXcSXBRSSb-lTlCm5aAtkLA3f5xoevMkuvQA1xQ",
+  "productUrl": "https://photos.google.com/lr/photo/ANABYShgGfa__jyB2AwRzldN-p15_R6YrNVCv4sFNRJxjrlDoLLzcOWLLcsEXcSXBRSSb-lTlCm5aAtkLA3f5xoevMkuvQA1xQ",
+  "baseUrl": "https://lh3.googleusercontent.com/lr/AGWb-e7JE5MqaRNrmZVHBU3DFD0cwF5UndxFaa7CnXHsOejw36qOCNmTkBviTTCtCMxihrriJtTlKah0_lTIpwPRRmt8ev_NJuoXVT0Dw-51MajsuWhzGFATYvpG7p36M2lyYPrkgHqDW-UUWOF3UmNt7-J0FUNGUNy1jZ8gErRV5z5dz8AnE3RncSXvwcI0_8du9WPEbZgLUMVBPLwze4t15efKV8Jy2txWZdG2xRf_NOiMGmnT0QLcvGcQKWypIOOTH4sh7Nd-pXLNuIj6TwJLgmgWGDB2p2Q9UBfl_QG966naZK0AR-VUJaMkL6poVEIYEGUTjy_XDZnwdFg9zyRlgy39-RHLT_sK2H9e4I3mXD5XCoNhAlJTzOHummr79qYJJ1sjiISYjMXL2Z4QTUNahdYu56WYqEeuGhkEaIzpylTbHxnSSMtds-3IQBOf7sHNub7Q8dCNmb5XWoYxsLnkdsZ2di4MPdFlZIzg8gFz7QkkfTD_KQjADaflR66grVESAPACowHZBr8eF-E0xHVN1Qn97hgRojxQ46Aa-nQNB78UIeKpaU5GUS1hgIlJq5tx1hrxE-RFv0ohjsXGxD5Iem856R6FWfpprCn0E4KxVDhx3urOzlK-Q1w8vhW87zZZ8NrOzGPmrhm0KW7RS4nROueGteUtJ5Y18ox_8JmeFX1mumDAhCEByqeqe75aa1I_CPfV6JdRR7HROwCCgmbxKpDy5w4VtdywBSgB31cSO3LEWMSxzK4syDAr5mO_soAxuiIFEhkPF0cHwRBde39zkhkviHEgLlvaJv31Q7a7tq1LFvxELgVQo5cwu0l1rO8S75fHf1MZKSJ0QEVpNGQnoN0WorqD1BDymXeBvkGROxjX4RzXO49zeEuz4HnOBVkdVlba38az",
+  "mimeType": "image/jpeg",
+  "mediaMetadata": {
+    "creationTime": "2019-05-04T06:16:38Z",
+    "width": "4608",
+    "height": "3456",
+    "photo": {
+      "cameraMake": "HUAWEI",
+      "cameraModel": "ANE-LX2J",
+      "focalLength": 3.81,
+      "apertureFNumber": 2.2,
+      "isoEquivalent": 64
+    }
+  },
+  "filename": "IMG_20190504_161638.jpg"
+}
+```
