@@ -30,6 +30,10 @@
    https://accounts.google.com/o/oauth2/auth?client_id=803537807130-07i8be23f46esl6tffrg0bebfe2e9c5f.apps.googleusercontent.com&redirect_uri=urn:ietf:wg:oauth:2.0:oob&scope=https://www.googleapis.com/auth/photoslibrary&response_type=code&access_type=offline
    ```
 6. Copy and paste the authorization URL into a browser and do all the consent confirmations, that will give you the at the end an authorization code:
+   ![Alt text](https://gist.githubusercontent.com/mbohun/81df9a27e90846ba913871b04d762c4f/raw/0d73d4d16a48eb34dda53f78812e3665843e087f/google_api_oauth2.0_authorization-00.png "")
+   ![Alt text](https://gist.githubusercontent.com/mbohun/81df9a27e90846ba913871b04d762c4f/raw/0d73d4d16a48eb34dda53f78812e3665843e087f/google_api_oauth2.0_authorization-01.png "")
+   ![Alt text](https://gist.githubusercontent.com/mbohun/81df9a27e90846ba913871b04d762c4f/raw/0d73d4d16a48eb34dda53f78812e3665843e087f/google_api_oauth2.0_authorization-02.png "")
+   ![Alt text](https://gist.githubusercontent.com/mbohun/81df9a27e90846ba913871b04d762c4f/raw/0d73d4d16a48eb34dda53f78812e3665843e087f/google_api_oauth2.0_authorization-03.png "")
 7. Use the authorization code to get the access token; this operation will as well get and save the refresh token that will be used in all subsequent operations:
    ```BASH
    ./google_api_get_access_token.sh -t 4/XQHOy_jiWWVC9CIQE6KjAk-yPTqdv63IPtvZGkoxSjvxD7afu_ORXwQ
