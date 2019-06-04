@@ -12,6 +12,8 @@ GOOGLE_CLIENT_ID=`echo $GOOGLE_API_OAUTH_CONF | jq -r '.installed.client_id'`
 # TODO: is there an easy way to concatenate all the URIs with %20?
 GOOGLE_REDIRECT_URI=`echo $GOOGLE_API_OAUTH_CONF | jq -r '.installed.redirect_uris[0]'`
 
+export TRICKY_RICKY="tricky-ricky-test"
+
 function get_authorization_code_url {
     local google_auth_uri=`echo $GOOGLE_API_OAUTH_CONF | jq -r '.installed.auth_uri'`
     echo "$google_auth_uri?client_id=$GOOGLE_CLIENT_ID&redirect_uri=$GOOGLE_REDIRECT_URI&scope=$GOOGLE_API_OAUTH_SCOPES&response_type=code&access_type=offline"
@@ -27,8 +29,8 @@ function get_access_token {
 	#
 	if [ -f "$GOOGLE_API_REFRESH_TOKEN_FILE" ]
 	then
-
 	    local refresh_token="`cat $GOOGLE_API_REFRESH_TOKEN_FILE`"
+	    export GOOGLE_API_REFRESH_TOKEN=${refresh_token}
 	    curl -s \
 		 --data "client_id=${GOOGLE_CLIENT_ID}" \
 		 --data "client_secret=${google_client_secret}" \
@@ -61,4 +63,29 @@ function get_access_token {
 #       --access-token
 
 #get_authorization_code_url
-get_access_token "${1}"
+#get_access_token "${1}"
+
+while getopts ":rut:" opt; do
+    case $opt in
+	r)
+	    get_access_token
+	    exit 0
+	    ;;
+	u)
+	    get_authorization_code_url
+	    exit 0
+	    ;;
+	t)
+	    get_access_token $OPTARG
+	    exit 0
+	    ;;
+	\?)
+	    echo "Invalid option: -$OPTARG" >&2
+	    exit 1
+	    ;;
+	:)
+	    echo "Option -$OPTARG requires an argument." >&2
+	    exit 1
+	    ;;
+    esac
+done
