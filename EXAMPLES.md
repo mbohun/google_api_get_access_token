@@ -61,3 +61,22 @@ curl -s \
   "ANABYShe1PXxS9kv_pT-dEcAVdB1c1KD1amwbPppulp9OZ-sTdwOPv1IIULMGpS8NEOGzEEIHab4"
 ]
 ```
+
+#### [albums.get](https://developers.google.com/photos/library/reference/rest/v1/albums/get?refresh=1)
+```BASH
+curl -s \
+     -X GET \
+     -H 'Content-type: application/json' \
+     -H "Authorization: Bearer `./google_api_get_access_token.sh -r`" \
+     https://photoslibrary.googleapis.com/v1/albums/ANABYSjvDJ6DJRnr6QMZqmfbns4prycC29i4BTZSKyT9OzgpWjrvQEJiKwwGS6kXmCXVFNCwnYO- | jq '.'
+```
+```JSON
+{
+  "id": "ANABYSjvDJ6DJRnr6QMZqmfbns4prycC29i4BTZSKyT9OzgpWjrvQEJiKwwGS6kXmCXVFNCwnYO-",
+  "title": "Bush tomato (Solanum sp.), Tuggeranong Hill, ACT",
+  "productUrl": "https://photos.google.com/lr/album/ANABYSjvDJ6DJRnr6QMZqmfbns4prycC29i4BTZSKyT9OzgpWjrvQEJiKwwGS6kXmCXVFNCwnYO-",
+  "mediaItemsCount": "21",
+  "coverPhotoBaseUrl": "https://lh3.googleusercontent.com/lr/AGWb-e5qqgj58M9oQ7ZF-nApgoTc2UQPECq4sGM07COk-Y4mZiswev1lTbxTlU0ZG5u00mN0PMqYcpR5QU09sTi-q0yZQEdYLn96gzbb2H2BOCS_uFtlI4f_FQHE8LH_YzMtnFe8xF5NBGIU_y_aZebj4HsQKy6Jw5yh6NT1FX7C3kwVGqE0ckyLu-Eh3sMDR1ilGOkqUkrGibRuCpEY8BdGiPk0JO8OsTDlxH976qnV3vCV2k2TliJmUxH-jSIaQoHnJkAwhpVhnISrrVDhsfqzhu9yhxJOA5KpE11wzXuNMol8qb8eDjxxNed9CLkGad14i5Afq8RFTxCcPtX6qBieSt8Uo8_c2TLw1vnr65bIlkViCdzENtAaSwf3qLDZyM_d41WPm3PUVFrGaFqxbpFmS0YhidsFdLcgUv8qPEJVuIWfZX3XL2V0MsJjsr1Ekz9HegPx7ietsrbjwN1WZaTvGZEixZECkyx_BxCF40Wd3VrG4XnD_qHZSNkN7AcVlhkQG_hT7dutH9_oeCNEjw_lSDb9BQGTyTBuy57IuuhONMuSWwvXHlMWJELOI6IkgljSdtZBnMxSuoCxZIFgXT3ZjpEJRC3Yrwlu4TJM84xKodAsVbgoIX6dh1tjj2vYcQ3vVMbBMLBt1EeGXJr0_-Pw6FufDTgL1q1sLuCayHf4kiiKlMXPzyGOTBWIuyRVu3F_3Unxq9rJYhpWpnDZ8A8RcHD7M5__AaeQ_v28aeIqYWZ_ZL6V1L_jNy5QMe4TCxSpLj_K-jNsq1NYYTO6cxWHisdiGdFoKhGkNJWi5AlAzabnaQUJyHCMWXCDp6530TXJZ_R8LhLVHKP4-UlEoyqPVLQe2e9FXluAvV_yJHaCwEmICmSpbwfivnXNZByGzBXnGlOh-dIp",
+  "coverPhotoMediaItemId": "ANABYShgGfa__jyB2AwRzldN-p15_R6YrNVCv4sFNRJxjrlDoLLzcOWLLcsEXcSXBRSSb-lTlCm5aAtkLA3f5xoevMkuvQA1xQ"
+}
+```
