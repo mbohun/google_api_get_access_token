@@ -12,8 +12,6 @@ GOOGLE_CLIENT_ID=`echo $GOOGLE_API_OAUTH_CONF | jq -r '.installed.client_id'`
 # TODO: is there an easy way to concatenate all the URIs with %20?
 GOOGLE_REDIRECT_URI=`echo $GOOGLE_API_OAUTH_CONF | jq -r '.installed.redirect_uris[0]'`
 
-export TRICKY_RICKY="tricky-ricky-test"
-
 function get_authorization_code_url {
     local google_auth_uri=`echo $GOOGLE_API_OAUTH_CONF | jq -r '.installed.auth_uri'`
     echo "$google_auth_uri?client_id=$GOOGLE_CLIENT_ID&redirect_uri=$GOOGLE_REDIRECT_URI&scope=$GOOGLE_API_OAUTH_SCOPES&response_type=code&access_type=offline"
@@ -48,7 +46,7 @@ function get_access_token {
 	# and return the access token.
 	#
 	local authorization_code=${1}
-	echo "authorization_code:${authorization_code}"
+	#echo "authorization_code:${authorization_code}"
 
 	local result=`curl -s --data "code=${authorization_code}" --data "client_id=${GOOGLE_CLIENT_ID}" --data "client_secret=${google_client_secret}" --data "redirect_uri=${GOOGLE_REDIRECT_URI}" --data "grant_type=authorization_code" --data "access_type=offline" $GOOGLE_API_TOKEN_URI`
 
@@ -57,14 +55,8 @@ function get_access_token {
     fi
 }
 
-# TODO: add proper (popt) switch/flag handling
-#       --authorization-code-url
-#       --access-token 4/XQGZjQhjk_xg_Uf6uSehQhGmQRlnzvk61_Bwm0BNee7Nod9rzcfdsG0
-#       --access-token
-
-#get_authorization_code_url
-#get_access_token "${1}"
-
+# TODO: add proper help/howto use info
+#
 while getopts ":rut:" opt; do
     case $opt in
 	r)
