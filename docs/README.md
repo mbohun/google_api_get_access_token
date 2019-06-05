@@ -33,11 +33,11 @@
 
    ![Alt text](https://raw.githubusercontent.com/mbohun/google_api_get_access_token/master/docs/images/google_api_oauth2.0_authorization-00.png "test")
    
-   ![Alt text](https://gist.githubusercontent.com/mbohun/81df9a27e90846ba913871b04d762c4f/raw/98963a5e0d7d36c69eb910d1e89c3064e59d2930/google_api_oauth2.0_authorization-01.png "")
+   ![Alt text](https://raw.githubusercontent.com/mbohun/google_api_get_access_token/master/docs/images/google_api_oauth2.0_authorization-01.png "")
    
-   ![Alt text](https://gist.githubusercontent.com/mbohun/81df9a27e90846ba913871b04d762c4f/raw/98963a5e0d7d36c69eb910d1e89c3064e59d2930/google_api_oauth2.0_authorization-02.png "")
+   ![Alt text](https://raw.githubusercontent.com/mbohun/google_api_get_access_token/master/docs/images/google_api_oauth2.0_authorization-02.png "")
    
-   ![Alt text](https://gist.githubusercontent.com/mbohun/81df9a27e90846ba913871b04d762c4f/raw/98963a5e0d7d36c69eb910d1e89c3064e59d2930/google_api_oauth2.0_authorization-03.png "")
+   ![Alt text](https://raw.githubusercontent.com/mbohun/google_api_get_access_token/master/docs/images/google_api_oauth2.0_authorization-03.png "")
 7. Use the authorization code to get the access token; this operation will as well get and save the refresh token that will be used in all subsequent operations:
    ```BASH
    ./google_api_get_access_token.sh -t 4/XQHOy_jiWWVC9CIQE6KjAk-yPTqdv63IPtvZGkoxSjvxD7afu_ORXwQ
@@ -54,6 +54,7 @@
    ./google_api_get_access_token.sh -r
    ya29.GlscB_HNAm6iN22f-_VJQiGyC5SiIJbbwFzeuUIgu-S2oITeJcGMGTMX85dWiJ9erK3gg32QBGVDt43MB8zF9REbbrcUv7b-4nsg3_PfJqOsYRombmYGZYjIdqU-
    ```
+
 ### Examples usage with the [Google Photos APIs](https://developers.google.com/photos/?refresh=1)
 
 #### [albums.list](https://developers.google.com/photos/library/reference/rest/v1/albums/list?refresh=1)
