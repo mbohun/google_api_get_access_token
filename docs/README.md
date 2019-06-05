@@ -33,11 +33,11 @@
 
    ![Alt text](https://raw.githubusercontent.com/mbohun/google_api_get_access_token/master/docs/images/google_api_oauth2.0_authorization-00.png "test")
    
-   ![Alt text](https://raw.githubusercontent.com/mbohun/google_api_get_access_token/master/docs/images/google_api_oauth2.0_authorization-01.png "")
+   ![Alt text](https://raw.githubusercontent.com/mbohun/google_api_get_access_token/master/docs/images/google_api_oauth2.0_authorization-01.png "test")
    
-   ![Alt text](https://raw.githubusercontent.com/mbohun/google_api_get_access_token/master/docs/images/google_api_oauth2.0_authorization-02.png "")
+   ![Alt text](https://raw.githubusercontent.com/mbohun/google_api_get_access_token/master/docs/images/google_api_oauth2.0_authorization-02.png "test")
    
-   ![Alt text](https://raw.githubusercontent.com/mbohun/google_api_get_access_token/master/docs/images/google_api_oauth2.0_authorization-03.png "")
+   ![Alt text](https://raw.githubusercontent.com/mbohun/google_api_get_access_token/master/docs/images/google_api_oauth2.0_authorization-03.png "test")
 7. Use the authorization code to get the access token; this operation will as well get and save the refresh token that will be used in all subsequent operations:
    ```BASH
    ./google_api_get_access_token.sh -t 4/XQHOy_jiWWVC9CIQE6KjAk-yPTqdv63IPtvZGkoxSjvxD7afu_ORXwQ
