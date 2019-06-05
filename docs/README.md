@@ -19,7 +19,7 @@
    }
    ```
    
-### Using the `google_api_get_access_token.sh` helper script   
+### Using the [google_api_get_access_token.sh](https://github.com/mbohun/google_api_get_access_token/blob/master/google_api_get_access_token.sh) helper script   
 1. Export the JSON credentials (credentials.json) into an env var `GOOGLE_API_OAUTH_CONF`:
    ```BASH
    export GOOGLE_API_OAUTH_CONF="`cat credentials.json`"
