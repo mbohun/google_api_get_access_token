@@ -1,5 +1,6 @@
-1. TODO: setup Google OAUTH2.0 app 
-2. save the JSON credentials
+1. Go to [Google API Console](https://console.developers.google.com/?refresh=1) and setup a Google OAUTH2.0 app
+2. In the [Google API Console](https://console.developers.google.com/?refresh=1) OAUTH2.0 app you created enable the Google Libraries/APIs you want to use (these examples use Photos Library API)
+3. In the [Google API Console](https://console.developers.google.com/?refresh=1) OAUTH2.0 app you created save the JSON credentials, example:
    ```JSON
    {
        "installed": {
@@ -16,20 +17,20 @@
        }
    }
    ```
-3. Export the JSON credentials into an env var `GOOGLE_API_OAUTH_CONF`:
+4. Export the JSON credentials into an env var `GOOGLE_API_OAUTH_CONF`:
    ```BASH
    export GOOGLE_API_OAUTH_CONF="`cat credentials.json`"
    ```
-4. Set the OAUTH scopes you want to use:
+5. Set the OAUTH scopes you want to use:
    ```BASH
    export GOOGLE_API_OAUTH_SCOPES="https://www.googleapis.com/auth/photoslibrary"
    ```
-5. Get the authorization URL:
+6. Get the authorization URL:
    ```BASH
    ./google_api_get_access_token.sh -u
    https://accounts.google.com/o/oauth2/auth?client_id=803537807130-07i8be23f46esl6tffrg0bebfe2e9c5f.apps.googleusercontent.com&redirect_uri=urn:ietf:wg:oauth:2.0:oob&scope=https://www.googleapis.com/auth/photoslibrary&response_type=code&access_type=offline
    ```
-6. Copy and paste the authorization URL into a browser and do all the consent confirmations, that will give you the at the end an authorization code:
+7. Copy and paste the authorization URL into a browser and do all the consent confirmations, that will give you the at the end an authorization code:
 
    ![Alt text](https://raw.githubusercontent.com/mbohun/google_api_get_access_token/master/docs/images/google_api_oauth2.0_authorization-00.png "test")
    
