@@ -169,6 +169,6 @@ curl -s \
 ```
 
 ### REFERENCES
-- https://developers.google.com/photos/library/reference/rest/?refresh=1
+- [Photos Library API](https://developers.google.com/photos/library/reference/rest/?refresh=1)
 - [Using one of your Google "Brand Accounts" instead of the default account](https://stackoverflow.com/posts/45106136/revisions)
 - TODO
