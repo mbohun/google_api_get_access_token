@@ -31,7 +31,7 @@
    ```
 6. Copy and paste the authorization URL into a browser and do all the consent confirmations, that will give you the at the end an authorization code:
 
-   ![Alt text](docs/images/google_api_oauth2.0_authorization-00.png "test")
+   ![Alt text](https://raw.githubusercontent.com/mbohun/google_api_get_access_token/master/docs/images/google_api_oauth2.0_authorization-00.png "test")
    
    ![Alt text](https://gist.githubusercontent.com/mbohun/81df9a27e90846ba913871b04d762c4f/raw/98963a5e0d7d36c69eb910d1e89c3064e59d2930/google_api_oauth2.0_authorization-01.png "")
    
