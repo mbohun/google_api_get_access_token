@@ -55,10 +55,25 @@ function get_access_token {
     fi
 }
 
+function show_help {
+    local program_name=${1}
+
+    echo "Usage: ${program_name} [-h] [-r] [-u] [-t authorization_code]"
+    echo "   ${program_name} -h                      Display this help message."
+    echo "   ${program_name} -r                      Get access token from refresh_token."
+    echo "   ${program_name} -u                      Create URL for getting an authorization_code."
+    echo "   ${program_name} -t authorization_code   Get acces_token and refresh_token."
+    echo
+}
+
 # TODO: add proper help/howto use info
 #
-while getopts ":rut:" opt; do
+while getopts ":hrut:" opt; do
     case $opt in
+	h)
+	    show_help `basename $0`
+	    exit 0
+	    ;;
 	r)
 	    get_access_token
 	    exit 0
@@ -73,11 +88,17 @@ while getopts ":rut:" opt; do
 	    ;;
 	\?)
 	    echo "Invalid option: -$OPTARG" >&2
+	    show_help `basename $0`
 	    exit 1
 	    ;;
 	:)
 	    echo "Option -$OPTARG requires an argument." >&2
+	    show_help `basename $0`
 	    exit 1
 	    ;;
     esac
 done
+
+echo "`basename $0` requires an option." >&2
+show_help `basename $0`
+exit 1
