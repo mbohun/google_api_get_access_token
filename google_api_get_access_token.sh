@@ -60,9 +60,9 @@ function show_help {
 
     echo "Usage: ${program_name} [-h] [-r] [-u] [-t authorization_code]"
     echo "   ${program_name} -h                      Display this help message."
-    echo "   ${program_name} -r                      Get access_token from refresh_token."
+    echo "   ${program_name} -r                      Get access_token from refresh_token (the refresh_token stored in: $GOOGLE_API_REFRESH_TOKEN_FILE)"
     echo "   ${program_name} -u                      Create URL for getting an authorization_code."
-    echo "   ${program_name} -t authorization_code   Get acces_token and refresh_token."
+    echo "   ${program_name} -t authorization_code   Get access_token and refresh_token (the refresh_token will be stored in: $GOOGLE_API_REFRESH_TOKEN_FILE)."
     echo
 }
 
