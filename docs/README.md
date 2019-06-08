@@ -30,8 +30,8 @@
    ```BASH
    export GOOGLE_API_OAUTH_SCOPES="https://www.googleapis.com/auth/photoslibrary"
    ```
-3. The script usasge:
-   ```BASH
+3. The script usage:
+   ```
     ./google_api_get_access_token.sh
     google_api_get_access_token.sh requires an option.
     Usage: google_api_get_access_token.sh [-h] [-r] [-u] [-t authorization_code]
